@@ -1,0 +1,24 @@
+@use 'sass:math';
+
+@mixin flex($justify-content: center, $align-items: center, $flex-direction: row, $gap: 0px, $wrap: nowrap, $inline: false) {
+  display: if($inline, inline-flex, flex);
+  justify-content: $justify-content;
+  align-items: $align-items;
+  flex-direction: $flex-direction;
+
+  gap: $gap;
+
+  flex-wrap: $wrap;
+}
+
+@mixin cursor {
+  cursor: url("../cursors/cursor.png"), auto;
+}
+
+@mixin pointer {
+  cursor: url("../cursors/cursor-pointer.png"), auto;
+}
+
+@mixin scrollCursor {
+  cursor: url("../cursors/cursor-scroll.png"), auto;
+}
